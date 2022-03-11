@@ -4,7 +4,7 @@ import "./poker.css";
 const PokerCard = (props) => {
   return (
     <div className="grid-item">
-      <div className="top-left">
+      <div className={`top-left ${props.type}`}>
         {props.rank}
         <br />
         <div>{props.suit}</div>
@@ -12,8 +12,14 @@ const PokerCard = (props) => {
       <div></div>
       <div></div>
       <div></div>
-      <div className={props.type}>{props.suit}</div>
+      {/* <div>
+        <img alt="" src="../public/poker-jack.png" />
+      </div> */}
+      <div className={`midPic ${props.type}`}>{props.suit}</div>
     </div>
+    // <div>
+    //   <img src="../public/poker-king.png" alt="" />
+    // </div>
   );
 };
 
